@@ -13,7 +13,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/login/', { username, password });
+      const response = await axios.post('http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/login', { username, password });
       localStorage.setItem('token', response.data.token);
       window.location.href = '/';
     } catch (error) {

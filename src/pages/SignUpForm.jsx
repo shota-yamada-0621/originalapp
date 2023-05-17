@@ -10,7 +10,7 @@ const SignupForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/signup/', { username, password });
+      const response = await axios.post('http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/signup/', { username, password });
       localStorage.setItem('token', response.data.token);
       window.location.href = '/';
     } catch (error) {

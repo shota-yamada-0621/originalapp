@@ -39,7 +39,7 @@ function MyForm() {
       setIsLoading(true);
       setShow(true);
       try {
-        const response = await axios.post('http://localhost:8000/api/create/', formState, {
+        const response = await axios.post('http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/create/', formState, {
         });
         console.log(response.data);
       } catch (error) {

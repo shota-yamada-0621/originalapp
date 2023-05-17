@@ -42,7 +42,7 @@ function ImpressionDetails() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/detail/${id}/`)
+      .get(`http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/detail/${id}/`)
       .then((response) => {
         setImpression(response.data);
       })
@@ -53,7 +53,7 @@ function ImpressionDetails() {
 
   const handleDelete = useCallback(() => {
     axios
-      .delete(`http://localhost:8000/api/delete/${id}/`)
+      .delete(`http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/delate/${id}/`)
       .then(() => {
         console.log('削除が完了しました。');
       })
@@ -68,7 +68,7 @@ function ImpressionDetails() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/detail/${id}/`)
+      .get(`http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/detail/${id}/`)
       .then((response) => {
         setImpression(response.data);
       })
@@ -79,7 +79,7 @@ function ImpressionDetails() {
 
     const handleEdit = () => {
       axios
-      .patch(`http://localhost:8000/api/update/${id}/`)
+      .patch(`http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/update/${id}/`)
       .then(() => {
       })
       .catch((error) => {

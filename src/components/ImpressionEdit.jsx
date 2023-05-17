@@ -19,7 +19,7 @@ function ImpressionEdit() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/detail/${id}/`)
+      .get(`http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/detail/${id}/`)
       .then((response) => {
         setImpression(response.data);
       })
@@ -39,7 +39,7 @@ function ImpressionEdit() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .patch(`http://localhost:8000/api/update/${id}/`, impression)
+      .patch(`http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/update/${id}/`, impression)
       .then(() => {
         console.log('更新が完了しました。');
         history.push(`/details/${id}`);

@@ -12,7 +12,7 @@ function Calendar() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/')
+    axios.get('http://ec2-13-230-218-1.ap-northeast-1.compute.amazonaws.com/api/')
       .then(response => {
         setData(response.data);
       })
